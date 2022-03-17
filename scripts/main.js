@@ -1,44 +1,56 @@
-const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
-
-
-// Detect request animation frame
-var scroll = window.requestAnimationFrame ||
-             // IE Fallback
-             function(callback){ window.setTimeout(callback, 1000/60)};
-var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
-
-function loop() {
-
-    Array.prototype.forEach.call(elementsToShow, function(element){
-      if (isElementInViewport(element)) {
-        element.classList.add('is-visible');
-      } else {
-        element.classList.remove('is-visible');
-      }
-    });
-
-    scroll(loop);
-}
-
-// Call the loop for the first time
-loop();
-
-// Helper function from: http://stackoverflow.com/a/7557433/274826
-function isElementInViewport(el) {
-  // special bonus for those using jQuery
-  if (typeof jQuery === "function" && el instanceof jQuery) {
-    el = el[0];
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
-  var rect = el.getBoundingClientRect();
-  return (
-    (rect.top <= 0
-      && rect.bottom >= 0)
-    ||
-    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-    ||
-    (rect.top >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-  );
 }
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+(function ($) {
+    // Typed Initiate
+    if ($('.hero .hero-text h2').length == 1) {
+        var typed_strings = $('.hero .hero-text .typed-text').text();
+        var typed = new Typed('.hero .hero-text h2', {
+            strings: typed_strings.split(', '),
+            typeSpeed: 100,
+            backSpeed: 20,
+            smartBackspace: false,
+            loop: true
+        });
+    }
+    })(jQuery);
