@@ -32,7 +32,7 @@ a {
 }
 
 a:hover {
-    color: #E0E0E0;
+    color: red;
     transition: .3s;
 }
 
@@ -74,6 +74,16 @@ h4 {
 	font-size: 16px;
     font-weight: light;
     color: #7A7A7A;
+}
+
+h5 {
+    font-size: 12px;
+    font-weight: light;
+    color: #7A7A7A;
+}
+
+h5::hover {
+    color: #E0E0E0 ;
 }
 
 p {
@@ -121,12 +131,18 @@ hr {
 
 .logoContainer {
     position: relative;
-    padding: 20px;
-    width: 100%;
+    /*padding: 20px;*/
+    width: 100px;
     height: 100px;
     background-color: none;
-    border: 1px solid #7A7A7A;
+    background-image: url("../img/raxalogo1.png");
+    background-size: cover;
+    /*border: 1px solid #7A7A7A;*/
+}
 
+.logoContainer:hover {
+    background-color: #E0E0E0;
+    transition: .3s;
 }
 
 
@@ -295,6 +311,16 @@ font-size: 12px;
     line-height: 0;
     font-weight: light;
     color: #7A7A7A;
+}
+
+h5 {
+    font-size: 12px;
+    font-weight: light;
+    color: #7A7A7A;
+}
+
+h5::hover {
+    color: red ;
 }
 
 .process p {
