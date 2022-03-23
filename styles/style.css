@@ -340,7 +340,7 @@ font-size: 12px;
     overflow: hidden;
 }
 
-.videoContainer:hover {
+.videoCover:hover {
     opacity: 50%;
     transition: .3s;
 }
