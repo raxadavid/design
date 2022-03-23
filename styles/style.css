@@ -112,7 +112,6 @@ hr {
     overflow-y:auto;
     border: 1px solid #7A7A7A;
 
-
 }
 
 .menu {
@@ -128,6 +127,9 @@ hr {
     padding: 0px;
     list-style: none;
 }
+
+
+
 
 .logoContainer {
     position: relative;
@@ -175,7 +177,48 @@ hr {
   transition: .3s;
 }
 
+/*RESIZING FOR PHONE SCREENS*/
+/*RESIZING FOR PHONE SCREENS*/
+/*RESIZING FOR PHONE SCREENS*/
+/*RESIZING FOR PHONE SCREENS*/
+/*RESIZING FOR PHONE SCREENS*/
+/*RESIZING FOR PHONE SCREENS*/
 
+
+@media (max-width: 1000px) {
+    .main { position: relative;
+            width: 100%;
+            margin: auto auto;
+            float: left;
+            height: auto;
+    }
+
+    .menu {
+        position: static;
+        float: none;
+    }
+
+    .menuLi {
+        margin: auto;
+        font-size: 20px;
+    }
+
+    #topButton {
+        display: none;
+        position: fixed;
+        bottom: 2rem;
+        top: unset;
+        z-index: 2;
+        font-size: 20px;
+        padding: 1rem;
+        background-color: white;
+    }
+
+    .projectContainer {
+        min-height: 500px;
+        background-color: none;
+    }
+}
 
 
 
@@ -213,7 +256,6 @@ font-size: 12px;
 
 .cv h4 {
     font-size: 16px;
-    line-height: 0;
     font-weight: light;
     color: #7A7A7A;
 }
@@ -221,7 +263,6 @@ font-size: 12px;
 .cv p {
     font-size: 12px;
     color: #262626;
-    line-height: 0;
 }
 
 /*LINE*/
@@ -244,13 +285,14 @@ font-size: 12px;
 /* PROJECT PAGE */
 
 
+
+
 .projectContainer {
     position: relative;
     background-color: none;
     padding: 50px;
     margin-top: 20px;
     width: 100%;
-    height: 300px;
     overflow-y: hidden;
     border: 1px solid #7A7A7A;
 }
@@ -274,6 +316,10 @@ font-size: 12px;
 .imageCover {
     height: 100%;
     background-size: cover;
+    border: 1px solid #7A7A7A;
+    text-align: center;
+    margin: auto;
+
 }
 
 
@@ -289,11 +335,15 @@ font-size: 12px;
 
 .videoCover {
     width: 100%;
-    height: inherit;
     background-position: center;
     display: flex;
+    overflow: hidden;
 }
 
+.videoContainer:hover {
+    opacity: 50%;
+    transition: .3s;
+}
 
 
 .process li {
@@ -304,7 +354,6 @@ font-size: 12px;
 .process h1 {
     font-size: 12px;
     color: #BABABA;
-    line-height: 0;
 
 }
 
@@ -321,7 +370,6 @@ font-size: 12px;
 
 .process h4 {
     font-size: 16px;
-    line-height: 0;
     font-weight: light;
     color: #7A7A7A;
 }
@@ -332,7 +380,7 @@ h5 {
     color: #7A7A7A;
 }
 
-h5::hover {
+h5:hover {
     color: red ;
 }
 
