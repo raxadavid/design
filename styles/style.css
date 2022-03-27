@@ -319,7 +319,6 @@ font-size: 12px;
     border: 1px solid #7A7A7A;
     text-align: center;
     margin: auto;
-
 }
 
 
@@ -380,8 +379,10 @@ h5 {
     color: #7A7A7A;
 }
 
-h5:hover {
-    color: red ;
+
+.process a:hover {
+    opacity: 70%;
+    transition: .3s;
 }
 
 .process p {
@@ -394,6 +395,62 @@ h5:hover {
     font-size:  10px;
     color: #262626 ;
 }
+
+.row {
+    margin-bottom: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content:  "";
+    display: table;
+    clear: both;
+}
+
+
+.column {
+    width: 50%;
+    float: left;
+}
+
+/* Responsive Layout */
+@media (max-width: 1000px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.imageColumn {
+    width: 90%;
+    padding-top: 30px;
+    padding: 15px;
+    border: 1px solid #7A7A7A;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
