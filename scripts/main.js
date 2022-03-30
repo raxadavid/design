@@ -1,4 +1,3 @@
-
 //Get the button
 var mybutton = document.getElementById("topButton");
 

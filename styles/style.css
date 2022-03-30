@@ -298,11 +298,33 @@ font-size: 12px;
 }
 
 .projectContainer:hover {
-    opacity: 60%;
+    opacity: 80%;
     transition: .3s;
 }
 
+.imageCoverHover {
+    display:  block;
+    height: 100%;
+    background-size: cover;
+    border: 1px solid #7A7A7A;
+    text-align: center;
+    margin: auto;
+    opacity: 0;
+    .transition: 3s;
+    
+    
+}
+
+    .projectContainer:hover .imageCoverHover {
+        display: block;
+        opacity: 1;
+        transition: .3s;
+    }
+
+
+
 .imageContainer {
+    display: block;
     background-color: #262626;
     margin: -10px -20px 0 20px;
     width: 220px;
@@ -311,7 +333,11 @@ font-size: 12px;
     float: right;
     border: 1px solid #7A7A7A;
     overflow: hidden;
+    background-size: cover;
 }
+
+
+
 
 .imageCover {
     height: 100%;
@@ -319,6 +345,7 @@ font-size: 12px;
     border: 1px solid #7A7A7A;
     text-align: center;
     margin: auto;
+    display: block;
 }
 
 
