@@ -101,6 +101,8 @@ hr {
 
 
 
+
+
 .main {
     background-color: none;
     position: static;
@@ -421,6 +423,11 @@ h5 {
 .process footer {
     font-size:  10px;
     color: #262626 ;
+}
+
+.process caption {
+    font-size: 10px;
+    color: red;
 }
 
 .row {
