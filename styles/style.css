@@ -415,6 +415,11 @@ h5 {
     color: #7A7A7A;
 }
 
+.process h6 {
+    font-size: 12px;
+    line-height: 10%;
+}
+
 
 .process a:hover {
     opacity: 70%;
@@ -424,9 +429,9 @@ h5 {
 .process p {
     font-size: 12px;
     color: #262626;
+    padding: 0 12px 0 0;
 }
 
-/*LINE*/
 .process footer {
     font-size:  10px;
     color: #262626 ;
